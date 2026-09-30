@@ -120,12 +120,21 @@ document.addEventListener('DOMContentLoaded', () => {
             ${proj.description}
           </p>
 
-          <div class="d-flex flex-wrap">
+          <div class="d-flex flex-wrap mt-3">
             <strong> Stack Involved: </strong>
           </div>
 
-          <div class="d-flex flex-wrap gap-2">
+          <div class="d-flex flex-wrap gap-2 mt-2">
             ${tagsHtml}
+          </div>
+
+          <div class="project-card-action-wrap">
+            <a href="#projects" class="project-card-action" aria-label="View project ${proj.title}">
+              <span>View Projects</span>
+              <svg class="project-card-action-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </a>
           </div>
         </div>
       `;

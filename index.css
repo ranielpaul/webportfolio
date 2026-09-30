@@ -422,6 +422,78 @@ body {
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s ease, background-color 0.2s ease;
 }
 
+.tool-item:only-child,
+.tool-item:last-child:nth-child(odd) {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+}
+
+.resume-download-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 0.5rem;
+}
+
+.resume-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.875rem 1.5rem;
+  background: #ffffff;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.resume-download-btn:hover,
+.resume-download-btn:focus-visible {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  color: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+  text-decoration: none;
+}
+
+.resume-download-btn:active {
+  transform: translateY(0);
+}
+
+.resume-download-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #2563eb;
+}
+
+.resume-download-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.1rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.resume-download-file {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-family: 'JetBrains Mono', monospace;
+}
+
 .tool-icon-tile:hover {
   transform: translateY(-3px);
   background-color: #ffffff !important;
@@ -485,6 +557,48 @@ body {
   color: #475569;
   font-size: 0.95rem;
   line-height: 1.65;
+}
+
+.project-card-action-wrap {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.project-card-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.875rem 1.4rem;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.project-card-action:hover,
+.project-card-action:focus-visible {
+  color: #ffffff;
+  text-decoration: none;
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(37, 99, 235, 0.28);
+}
+
+.project-card-action:active {
+  transform: translateY(0);
+}
+
+.project-card-action-icon {
+  width: 1rem;
+  height: 1rem;
 }
 
 /* 3-Slide Preview Carousel */
