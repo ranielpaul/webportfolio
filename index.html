@@ -1,0 +1,542 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raniel Miranda - Portfolio</title>
+    <meta name="description" content="Crafting digital products with precision & purpose. Senior Engineer & Full-Stack Developer portfolio featuring featured projects and contact." />
+
+    <!-- Google Fonts: Plus Jakarta Sans, JetBrains Mono, Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <!-- Bootstrap Icons 1.11.3 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="bg-light min-vh-90 d-flex flex-column" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
+
+    <!-- Top Navigation Bar: Sticky with Centered 3 Links -->
+    <header class="site-header py-3 px-md-4 bg-white  sticky-top border-bottom border-light shadow-sm">
+      <div class="container-xl d-flex align-items-center gap-4 gap-md-0 justify-content-md-between">
+        <!-- Left: Brand Badge & Name -->
+        <a href="#home" class="brand-link d-flex align-items-center gap-2 text-decoration-none">
+          <div class="brand-badge d-flex align-items-center justify-content-center text-white fw-bold rounded-2 text-xs">
+            RM
+          </div>
+          <span class="d-none d-sm-flex fs-6 fw-bold text-dark ">
+            Raniel Paul Miranda
+          </span>
+        </a>
+
+        <!-- Center: Nav Links -->
+        <nav id="mainNav" class=" nav-pill-container" aria-label="Main Navigation">
+          <a class="nav-pill-btn active text-decoration-none" href="#landing">Home</a>
+          <a class="nav-pill-btn text-decoration-none" href="#projects">Projects</a>
+          <a class="nav-pill-btn text-decoration-none" href="#tools">Tools</a>
+          <a class="nav-pill-btn text-decoration-none" href="#contact">Contact</a>
+        </nav>
+
+        <!-- Right: Available for Hire Status Badge -->
+        <div class="d-none d-sm-flex align-items-center">
+          <div class="status-badge-hire">
+            <span class="pulsing-green-dot"></span>
+            <span>AVAILABLE FOR HIRE</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow-1">
+
+      <!-- Section 1: Home / Landing -->
+      <section id="landing" class="min-vh-90 d-flex align-items-center pt-4 pb-3 home-gradient-bg position-relative">
+        <div class="home-ambient-glow" aria-hidden="true"></div>
+        <div class="home-ambient-glow-secondary" aria-hidden="true"></div>
+        <div class="container-xl position-relative landing-shell">
+          <div class="row g-5 align-items-center">
+            <!-- Left Column: Headline, Bio, and Buttons -->
+            <div class="col-lg-6 text-center text-lg-start">
+              <div class="d-flex flex-column gap-3 align-items-center align-items-lg-start text-center text-lg-start">
+                <!-- Soft Blue Kicker Pill -->
+                <div>
+                  <span class="landing-kicker px-3 py-1 rounded-pill text-xs fw-semibold d-inline-block shadow-sm">
+                    Software Engineer &amp; Full Stack Web Developer
+                  </span>
+                </div>
+
+                <!-- Display Headline -->
+                <h1 class="landing-title font-display display-4 text-center text-lg-start mb-1">
+                  Crafting digital
+                  products with
+                  <span id="typedText" class="landing-highlight display-4 font-display d-block">
+                    <!-- Javascript output -->
+                  </span>
+                </h1>
+
+                <!-- Narrative Subtext -->
+                <p class="landing-description text-secondary fs-6 mb-3 pe-lg-4 mx-auto mx-lg-0 text-center text-lg-start">
+                  I engineer resilient web architectures, performant user interfaces,
+                  and intuitive interactive experiences using modern web ecosystems
+                  and clean design standards.
+                </p>
+
+                <!-- 2 Main Action Buttons -->
+                <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+                  <a href="#projects" class="btn-blue-primary text-decoration-none">
+                    <span>View Projects</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                  <a href="#contact" class="btn-white-secondary text-decoration-none">
+                    <span>Get in Touch</span>
+                  </a>
+                </div>
+
+                <!-- Core Technology Focus -->
+                <div class="pt-2 ">
+                  <div class="tech-focus-label font-mono-code mb-2">
+                    CORE TECHNOLOGY FOCUS
+                  </div>
+                  <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start">
+                    <div class="tech-pill px-3 py-1 rounded-2 bg-white  border border text-dark text-xs d-flex align-items-center gap-2 shadow-sm">
+                      <i class="bi bi-layers text-indigo-500"></i>
+                      <span>Full-Stack</span>
+                    </div>
+                    <div class="tech-pill px-3 py-1 rounded-2 bg-white  border border text-dark text-xs d-flex align-items-center gap-2 shadow-sm">
+                      <i class="bi bi-window-sidebar text-blue-500"></i>
+                      <span>UI Architecture</span>
+                    </div>
+                    <div class="tech-pill px-3 py-1 rounded-2 bg-white  border border text-dark text-xs d-flex align-items-center gap-2 shadow-sm">
+                      <i class="bi bi-cloud-arrow-up text-sky-500"></i>
+                      <span>Cloud &amp; API</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Fake VS Code Editor Recreation -->
+            <div class="col-lg-6">
+              <div class="vscode-card">
+                <!-- Header -->
+                <div class="vscode-header">
+                  <div class="traffic-dots">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                  </div>
+                  <div class="font-mono-code text-xs text-light">
+                    miranda-portfolio-v1.tsx
+                  </div>
+                </div>
+
+                <!-- Syntax Highlighted Code Body -->
+                <div class="vscode-body">
+                  <div class ="section-spacer-2"></div>
+                  <div>
+                    <span class="code-keyword">const</span> <span class="code-variable">Software_developer</span> = {
+                  </div>
+                  <div class="ps-4">
+                    <span class="code-prop">name:</span> <span class="code-string">'Raniel Paul'</span>,
+                  </div>
+                  <div class="ps-4">
+                    <span class="code-prop">role:</span> <span class="code-string">'Software Enginee &amp; Full Stack Web Developer'</span>,
+                  </div>
+                  <div class="ps-4">
+                    <span class="code-prop">skills:</span> [
+                    <span class="code-string">'Bootstrap'</span>,
+                    <span class="code-string">'React'</span>,
+                    <span class="code-string">'Python'</span>,
+                    <span class="code-string">'C#'</span>],
+                  </div>
+                  <div class="ps-4">
+                    <span class="code-prop">passion:</span> <span class="code-string">'Building exquisite user software'</span>
+                  </div>
+                  <div>};</div>
+                  <div class ="section-spacer-2"></div>
+                </div>
+
+                <!-- Card Footer -->
+                <div class="vscode-footer">
+                  <div>
+                    <div class="vscode-metric-label font-mono-code">
+                      System Performance
+                    </div>
+                    <div class="text-white font-mono-code text-xs fw-semibold d-flex align-items-center gap-2">
+                      <span>99.98%</span>
+                      <span class="vscode-metric-gain">▲ 100 Efficiency</span>
+                    </div>
+                  </div>
+
+                  <div class="vscode-optimal-pill px-2 py-1 rounded text-xs font-mono-code fw-semibold d-flex align-items-center gap-1">
+                    OPTIMAL
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Projects -->
+      <section id="projects" class="min-vh-100 d-flex flex-column justify-content-center py-5 overflow-hidden">
+        <div class="container-xl my-auto">
+          <!-- Section Title & Subtitle -->
+          <div class="text-center mb-4">
+            <h2 class="font-display display-6 fw-bold text-dark mb-2">
+              My Projects
+            </h2>
+            <p class="text-secondary fs-6  mx-auto mb-0">
+              A curated showcase of recent applications, systems, and digital product designs.
+            </p>
+          </div>
+
+          <div class="section-spacer-1"></div>
+
+          <!-- 3-Slide Preview Carousel Stage -->
+          <div class="position-relative px-2 px-md-5">
+            <button type="button" id="prevBtn" class="carousel-nav-btn position-absolute top-50 start-0 translate-middle-y ms-2 ms-md-4" aria-label="Previous project">
+              <i class="bi bi-arrow-left"></i>
+            </button>
+
+            <div class="carousel-stage-container" id="carouselStage">
+              <!-- Rendered by script.js -->
+            </div>
+
+            <button type="button" id="nextBtn" class="carousel-nav-btn position-absolute top-50 end-0 translate-middle-y me-2 me-md-4" aria-label="Next project">
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+
+          <div class="section-spacer-2"></div>
+          
+          <!-- Pagination Dots -->
+          <div class="d-flex justify-content-center align-items-center gap-2 mt-5" id="paginationDots">
+            <!-- Rendered by script.js -->
+          </div>
+
+          <!-- Action Notice Feedback -->
+          <div id="actionNotice" class="text-center mt-3 d-none">
+            <span class="p-2 px-3 text-xs font-mono-code text-emerald-700 bg-emerald-50 rounded border border-emerald-200 d-inline-block">
+              <i class="bi bi-check2-circle me-1"></i>
+              <span id="actionNoticeText"></span>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Tools & Technologies -->
+      <section id="tools" class="py-5 my-auto">
+        <div class="container-xl">
+          <!-- Section Header -->
+          <div class="text-center mb-5">
+            <span class="tool-section-pill px-3 py-1 rounded-pill text-xs fw-semibold d-inline-block mb-2">
+              Technical Ecosystem
+            </span>
+            <h2 class="font-display display-6 fw-bold text-dark mb-2">
+              Tools &amp; Technologies
+            </h2>
+            <p class="text-secondary fs-6  mx-auto mb-0">
+              Categorized stack of client libraries, backend architectures, databases, and development tooling.
+            </p>
+          </div>
+
+          <!-- 3 Columns: Frontend, Backend, Tools & Others -->
+          <div class="row g-4 justify-content-center text-center">
+
+            <!-- Column 1: Frontend -->
+            <div class="col-lg-4 col-md-6">
+              <div class="standard-card p-4 h-100 d-flex flex-column">
+                <div class="pb-3 mb-3 border-bottom border-light text-center">
+                  <h3 class="fs-5 fw-bold text-dark mb-0">Frontend</h3>
+                  <span class="text-xs font-mono-code">UI, Styling &amp; Web Engines</span>
+                </div>
+
+                <!-- Frontend Tool Images -->
+                <div class="row g-3">
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 bg-light border border d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="HTML5">
+                      <img src="./images/html5.svg" alt="HTML5" class="mb-2 tool-image" />
+                      <span class="text-xs fw-bold text-dark font-display">HTML5</span>
+                      <span class= font-mono-code tool-img-text">Markup</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 bg-light border border d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="Cascading Style Sheets (CSS)">
+                      <img src="./images/css3.svg" alt="CSS3" class="mb-2 tool-image" />
+                      <span class="text-xs fw-bold text-dark font-display">CSS3</span>
+                      <span class= font-mono-code tool-img-text">Styling</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 bg-light border border d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="JavaScript">
+                      <img src="./images/javascript.svg" alt="JavaScript" class="mb-2 tool-image" />
+                      <span class="text-xs fw-bold text-dark font-display">JavaScript</span>
+                      <span class= font-mono-code tool-img-text">Language</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 bg-light border border d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="React.js">
+                      <img src="./images/react.svg" alt="React.js" class="mb-2 tool-image" />
+                      <span class="text-xs fw-bold text-dark font-display">React.js</span>
+                      <span class= font-mono-code tool-img-text">Library</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 bg-light border border d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="Next.js">
+                      <img src="./images/nextjs.svg" alt="Next.js" class="mb-2 tool-image" />
+                      <span class="text-xs fw-bold text-dark font-display">Next.js</span>
+                      <span class= font-mono-code tool-img-text">Framework</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 bg-light border border d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="Bootstrap (Framework)">
+                      <img src="./images/bootstrap.svg" alt="Bootstrap" class="mb-2 tool-image" />
+                      <span class="text-xs fw-bold text-dark font-display">Bootstrap</span>
+                      <span class= font-mono-code tool-img-text">UI Framework</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 bg-light border border d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="Bootstrap (Framework)">
+                      <img src="./images/tailwindcss.svg" alt="Bootstrap" class="mb-2 tool-image" />
+                      <span class="text-xs fw-bold text-dark font-display">Tailwind CSS</span>
+                      <span class= font-mono-code tool-img-text">UI Framework</span>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 2: Backend -->
+            <div class="col-lg-4 col-md-6">
+              <div class="standard-card p-4 h-100 d-flex flex-column">
+                <div class="pb-3 mb-3 border-bottom border-light text-center">
+                  <h3 class="fs-5 fw-bold text-dark mb-0">Backend</h3>
+                  <span class="text-xs font-mono-code">Services, Database &amp; Cloud</span>
+                </div>
+
+                <!-- Backend Tool Images  -->
+                <div class="row g-3">
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 bg-light border border d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="Python">
+                      <img src="./images/python.svg" alt="Python" class="mb-2 tool-image" />
+                      <span class="text-xs fw-bold text-dark font-display">Python</span>
+                      <span class= font-mono-code tool-img-text">Backend Engine</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 bg-light border border d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="MongoDB">
+                      <img src="./images/mongodb.svg" alt="MongoDB" class="mb-2 tool-image" />
+                      <span class="text-xs fw-bold text-dark font-display">MongoDB</span>
+                      <span class= font-mono-code tool-img-text">NoSQL Database</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 bg-light border border d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="Supabase">
+                      <img src="./images/supabase.svg" alt="Supabase" class="mb-2 tool-image" />
+                      <span class="text-xs fw-bold text-dark font-display">Supabase</span>
+                      <span class= font-mono-code tool-img-text">PostgreSQL BaaS</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 bg-light border border d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="HTML5">
+                      <img src="./images/java.svg" alt="HTML5" class="mb-2 tool-image" />
+                      <span class="text-xs fw-bold text-dark font-display">Java</span>
+                      <span class= font-mono-code tool-img-text">Backend Engine</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 bg-light border border d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="Unity">
+                      <img src="./images/render.svg" alt="Unity" class="mb-2 tool-image" />
+                      <span class="text-xs fw-bold text-dark font-display">Render</span>
+                      <span class= font-mono-code tool-img-text">Cloud Hosting</span>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 3: Tools & Others -->
+            <div class="col-lg-4 col-md-6">
+              <div class="standard-card p-4 h-100 d-flex flex-column">
+                <div class="pb-3 mb-3 border-bottom border-light text-center">
+                  <h3 class="fs-5 fw-bold text-dark mb-0">Tools &amp; Others</h3>
+                  <span class="text-xs font-mono-code">VCS, Workflow &amp; Game Engines</span>
+                </div>
+
+                <!-- Others Tool Images Grid -->
+                <div class="row g-3">
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 bg-light border border d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="Git">
+                      <img src="./images/git.svg" alt="Git" class="mb-2 tool-image" />
+                      <span class="text-xs fw-bold text-dark font-display">Git</span>
+                      <span class= font-mono-code tool-img-text">Version Control</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 bg-light border border d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="GitHub">
+                      <img src="./images/github.svg" alt="GitHub" class="mb-2 tool-image" />
+                      <span class="text-xs fw-bold text-dark font-display">GitHub</span>
+                      <span class= font-mono-code tool-img-text">Cloud VCS</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 bg-light border border d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="Gitea">
+                      <img src="./images/gitea.svg" alt="Gitea" class="mb-2 tool-image" />
+                      <span class="text-xs fw-bold text-dark font-display">Gitea</span>
+                      <span class= font-mono-code tool-img-text">Self-Hosted Git</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 bg-light border border d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="VSCode">
+                      <img src="./images/vscode.svg" alt="VSCode" class="mb-2 tool-image" />
+                      <span class="text-xs fw-bold text-dark font-display">VSCode</span>
+                      <span class= font-mono-code tool-img-text">IDE Editor</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 bg-light border border d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="Trello">
+                      <img src="./images/trello.svg" alt="Trello" class="mb-2 tool-image" />
+                      <span class="text-xs fw-bold text-dark font-display">Trello</span>
+                      <span class= font-mono-code tool-img-text">Project Board</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                  <div class="p-3 rounded-3 bg-slate-50 border border-slate-200 d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="Sublime Text">
+                    <img src="./images/sublimetext.svg" alt="Sublime Text" class="mb-2" style="width: 42px; height: 42px; object-fit: contain;" />
+                    <span class="text-xs fw-bold text-slate-800 font-display">Sublime Text</span>
+                    <span class="text-slate-400 font-mono-code" style="font-size: 0.68rem;">Code Editor</span>
+                  </div>
+                </div>
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 bg-light border border d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="Unity">
+                      <img src="./images/unity.svg" alt="Unity" class="mb-2 tool-image" />
+                      <span class="text-xs fw-bold text-dark font-display">Unity</span>
+                      <span class= font-mono-code tool-img-text">Game &amp; 3D</span>
+                    </div>
+                  </div>                                    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Contact Form -->
+      <section id="contact" class="min-vh-100 d-flex flex-column justify-content-between pt-5">
+        <div class="container-xl my-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-5">
+            <h2 class="font-display display-6 fw-bold text-dark mb-2">
+              Contact Me
+            </h2>
+            <p class="text-secondary fs-6  mx-auto mb-0">
+              Have an exciting idea, open position, or question? Send a message and let's collaborate.
+            </p>
+          </div>
+
+          <!-- 4-Field Simplified Contact Form Card -->
+          <div class="contact-card-shell mx-auto">
+            <div class="standard-card p-4 p-md-5">
+              <!-- Form Container -->
+              <form id="contactForm">
+                <div class="row g-4">
+                  <!-- Field 1: Name -->
+                  <div class="col-md-6">
+                    <label for="contactName" class="form-label text-xs fw-semibold text-dark mb-1">
+                      Name
+                    </label>
+                    <input id="contactName" type="text" required placeholder="e.g. Elena Rostova" class="form-input-clean" />
+                  </div>
+
+                  <!-- Field 2: Email -->
+                  <div class="col-md-6">
+                    <label for="contactEmail" class="form-label text-xs fw-semibold text-dark mb-1">
+                      Email
+                    </label>
+                    <input id="contactEmail" type="email" required placeholder="elena@company.com" class="form-input-clean" />
+                  </div>
+
+                  <!-- Field 3: Subject (Spans whole row) -->
+                  <div class="col-12">
+                    <label for="contactSubject" class="form-label text-xs fw-semibold text-dark mb-1">
+                      Subject
+                    </label>
+                    <input id="contactSubject" type="text" placeholder="Product collaboration / Contract Inquiry" class="form-input-clean" />
+                  </div>
+
+                  <!-- Field 4: Message (Spans whole row) -->
+                  <div class="col-12">
+                    <label for="contactMessage" class="form-label text-xs fw-semibold text-dark mb-1">
+                      Message
+                    </label>
+                    <textarea id="contactMessage" rows="5" required placeholder="Write your note, timeline, or requirements here..." class="form-input-clean"></textarea>
+                  </div>
+
+                  <!-- Submit Button Centered -->
+                  <div class="col-12 text-center pt-2">
+                    <button type="submit" id="submitBtn" class="btn-blue-primary submit-btn px-4 py-2">
+                      <span>Send Message</span>
+                      <i class="bi bi-send-fill fs-6 ms-1"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <!-- Success Confirmation (Hidden by default) -->
+              <div id="successNotice" class="text-center py-4 d-none">
+                <div class="success-check-icon mx-auto rounded-circle d-flex align-items-center justify-content-center mb-3">
+                  <i class="bi bi-check-lg fs-3"></i>
+                </div>
+                <h3 class="fs-4 fw-bold text-dark mb-2">Message Dispatched!</h3>
+                <p class="text-secondary mb-4 mx-auto">
+                  Thank you, <strong id="sentName"></strong>. Your note regarding &ldquo;<span id="sentSubject"></span>&rdquo; has been sent. A confirmation has been routed to <strong id="sentEmail"></strong>.
+                </p>
+                <button type="button" id="resetBtn" class="btn-white-secondary">
+                  Send Another Message
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id= "footer" class="mt-5 py-4 border-top border bg-footer">
+          <div class="container-xl d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 text-xs">
+            <!-- Social Icons -->            
+            <div class="d-flex align-items-center gap-3 fs-6">
+              <a href="https://www.facebook.com/XRanielX/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a> 
+              <a href="https://www.linkedin.com/in/raniel-paul-miranda-508042420/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>              
+              <a href="https://github.com/ranielpaul" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub">
+                <i class="bi bi-github"></i>
+              </a>
+            </div>
+
+            <!-- Copyright & Stack -->
+            <div class="text-end footer-end text-center text-md-end">
+              <div>Designed &amp; Built by Raniel Paul Miranda &copy; 2026. All rights reserved.</div>
+              <div class="footer-meta footer-end">
+                Crafted with semantic HTML, Bootstrap &amp; CSS
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
