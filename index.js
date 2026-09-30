@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       card.innerHTML = `
         <!-- Top Half: [IMAGE / PREVIEW SCREEN MOCK] -->
-        <div class="project-card-visual" aria-label="Project preview image" style="background-image: url('${proj.imageBg}');"></div>
+        <div class="project-card-visual" aria-label="Project preview image"></div>
 
         <!-- Bottom Half: [TEXT CONTENT] -->
         <div>

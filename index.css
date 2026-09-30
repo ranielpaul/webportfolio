@@ -150,6 +150,21 @@ body {
   font-size: 0.68rem;
 }
 
+/* JS Styles */
+.project-card-visual {
+  background-image: url('./images/placeholder.png');
+}
+
+.tool-sublime-image {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.tool-sublime-label {
+  font-size: 0.68rem;
+}
+
 /* Contact Section */
 .contact-card-shell {
   max-width: 760px;
