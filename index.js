@@ -5,10 +5,21 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  const DEFAULT_PROJECT_IMAGE = './images/projects/placeholder.png';
+
   // ==========================================
   // 1. PROJECT DATA
   // ==========================================
   const projects = [
+    {
+      id: 'Capstone-Web-Portfolio',
+      badge: 'Live Project',
+      title: 'Capstone Web Portfolio',
+      description:
+        'A capstone web portfolio showcasing the numerous projects, tools, and technologies that I am aware of',
+      tags: ['HTML', 'Bootstrap', 'JavaScript', 'tailwindcss'],
+      imageBg: './images/projects/capstone-web-portfolio.png',
+    },
     {
       id: 'E-commerce-API',
       badge: 'Future Project',
@@ -16,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       description:
         'Dynamic E-Commerce Workflow Management. The system features dynamic routes for order processing, real-time inventory updates, and secure user authentication. It also supports seamless automated order reporting and comprehensive product management. Documented Backend API published publicly using Postman',
       tags: ['Python', 'HTML', 'Bootstrap', 'Postman'],
-      imageBg: './images/placeholder.png',
+      imageBg: DEFAULT_PROJECT_IMAGE,
     },
     {
       id: 'Course-Booking-API',
@@ -25,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
       description:
         'RESTful API for managing course enrollments, featuring user registration, authentication, and retrieval of user details. Supports course creation, updates, archiving, activation, and student enrollment. Publicly documented using Postman.',
       tags: ['Python', 'HTML', 'Bootstrap', 'Postman'],
-      imageBg: './images/placeholder.png',
+      imageBg: DEFAULT_PROJECT_IMAGE,
     },
     {
       id: 'Course-Booking-App',
@@ -34,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       description:
         'A MERN-stack course enrollment sytstem featuring user registration, authentication, and profile management. Authenticated users can create, update, archive, and activate courses The platform also allows users to browse available courses and enroll seamlessly.',
       tags: ['Python', 'HTML', 'Bootstrap', 'Postman'],
-      imageBg: './images/placeholder.png',
+      imageBg: DEFAULT_PROJECT_IMAGE,
     },
     {
       id: 'E-Commerce-App',
@@ -43,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       description:
         'MERN E-Commerce Platform. The platform features dynamic product catalog with filtering and sorting. real-time search, seamless cart updates, secure checkout, and a comprehensive admin dashboard with real-time analytics and user management capabilities.',
       tags: ['Python', 'HTML', 'Bootstrap', 'Postman'],
-      imageBg: './images/placeholder.png',
+      imageBg: DEFAULT_PROJECT_IMAGE,
     },
     {
       id: 'Airline-Mockup',
@@ -52,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
       description:
         'Side Project: Conceptual design showcasing an intuitive UIfor flight search, seat selection, and booking confirmation, focusing on user experience and workflow efficiency.',
       tags: ['Python', 'HTML', 'Bootstrap', 'Postman'],
-        imageBg: './images/placeholder.png',
+        imageBg: DEFAULT_PROJECT_IMAGE,
     },
     {
       id: 'Airline-Prototype',
@@ -61,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
       description:
         'Side Project: Interactive prototype simulating end-to-end airline booking functionalities, including flight search, reservation, payment, processing, and real-time ticket management.',
       tags: ['Python', 'HTML', 'Bootstrap', 'Postman'],
-      imageBg: './images/placeholder.png',
+      imageBg: DEFAULT_PROJECT_IMAGE,
     },
   ];
 
@@ -87,6 +98,56 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2500);
   }
 
+  function openProjectLightbox(src, title) {
+    const existingLightbox = document.getElementById('projectLightbox');
+    if (existingLightbox) existingLightbox.remove();
+
+    const lightbox = document.createElement('div');
+    lightbox.id = 'projectLightbox';
+    lightbox.className = 'project-lightbox';
+    lightbox.setAttribute('role', 'dialog');
+    lightbox.setAttribute('aria-modal', 'true');
+    lightbox.setAttribute('aria-label', `${title} preview`);
+
+    const panel = document.createElement('div');
+    panel.className = 'project-lightbox-panel';
+
+    const image = document.createElement('img');
+    image.className = 'project-lightbox-image';
+    image.src = src || DEFAULT_PROJECT_IMAGE;
+    image.alt = `${title} full preview`;
+    image.loading = 'eager';
+
+    const label = document.createElement('div');
+    label.className = 'project-lightbox-label';
+    label.textContent = title;
+
+    panel.appendChild(image);
+    panel.appendChild(label);
+    lightbox.appendChild(panel);
+    document.body.appendChild(lightbox);
+
+    const closeLightbox = () => {
+      lightbox.remove();
+      document.removeEventListener('keydown', handleEscapeClose);
+    };
+
+    const handleEscapeClose = (event) => {
+      if (event.key === 'Escape') {
+        closeLightbox();
+      }
+    };
+
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+    document.addEventListener('keydown', handleEscapeClose);
+
+    requestAnimationFrame(() => lightbox.classList.add('show'));
+  }
+
   function initCarousel() {
     if (!carouselStage) return;
 
@@ -105,7 +166,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
       card.innerHTML = `
         <!-- Top Half: [IMAGE / PREVIEW SCREEN MOCK] -->
-        <div class="project-card-visual" aria-label="Project preview image"></div>
+        <img
+          class="project-card-visual"
+          src="${proj.imageBg || DEFAULT_PROJECT_IMAGE}"
+          alt="${proj.title} preview"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='${DEFAULT_PROJECT_IMAGE}'"
+          aria-label="Project preview image"
+        />
 
         <!-- Bottom Half: [TEXT CONTENT] -->
         <div>
@@ -138,6 +206,12 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>
       `;
+
+      const previewImage = card.querySelector('.project-card-visual');
+      previewImage?.addEventListener('click', (event) => {
+        event.stopPropagation();
+        openProjectLightbox(proj.imageBg || DEFAULT_PROJECT_IMAGE, proj.title);
+      });
 
       // Live & Source button events
       const liveBtn = card.querySelector('.btn-live-preview');

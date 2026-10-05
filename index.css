@@ -152,7 +152,65 @@ body {
 
 /* JS Styles */
 .project-card-visual {
-  background-image: url('./images/placeholder.png');
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card-visual:hover {
+  transform: translateY(-2px);
+}
+
+.project-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  padding: 1.5rem;
+}
+
+.project-lightbox.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.project-lightbox-panel {
+  position: relative;
+  width: min(92vw, 1000px);
+  max-height: 90vh;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 25px 80px rgba(15, 23, 42, 0.5);
+}
+
+.project-lightbox-image {
+  display: block;
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 0.75rem;
+  background: #0f172a;
+}
+
+.project-lightbox-label {
+  margin-top: 0.75rem;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
 }
 
 .tool-sublime-image {
