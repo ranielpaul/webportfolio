@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Dynamic E-Commerce Workflow Management. The system features dynamic routes for order processing, real-time inventory updates, and secure user authentication. It also supports seamless automated order reporting and comprehensive product management. Documented Backend API published publicly using Postman',
       tags: ['Python', 'HTML', 'Bootstrap', 'Postman'],
       imageBg: DEFAULT_PROJECT_IMAGE,
+      url: 'https://ranielpaul-2841292.postman.co/documentation/58907649-1087f4a0-ef9d-4f9d-a5a2-afcb3c29b4f4/publish?workspaceId=92191070-9e7c-4b5b-9889-0b09631b458c&authFlowId=e8496a65-4a0a-47c8-95a0-9a7bcad00d23&_pmt=pmMTc5MTg1MDI0Njg4MQ%253D%253D%257CPM.MjAyNi0wOS0xMVQwOTo1OTo1Ni4yOTRa',
     },
     {
       id: 'Course-Booking-API',
@@ -197,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
 
           <div class="project-card-action-wrap">
-            <a href="#projects" class="project-card-action" aria-label="View project ${proj.title}">
+            <a href="${proj.url || '#projects'}" class="project-card-action" aria-label="View project ${proj.title}">
               <span>View Projects</span>
               <svg class="project-card-action-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
