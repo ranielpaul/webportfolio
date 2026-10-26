@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       description:
         'Dynamic E-Commerce Workflow Management. The system features dynamic routes for order processing, real-time inventory updates, and secure user authentication. It also supports seamless automated order reporting and comprehensive product management. Documented Backend API published publicly using Postman',
       tags: ['Python', 'HTML', 'Bootstrap', 'Postman'],
-      imageBg: DEFAULT_PROJECT_IMAGE,
+      imageBg: "./images/projects/E-commerce-API.png",
       url: 'https://ranielpaul-2841292.postman.co/documentation/58907649-1087f4a0-ef9d-4f9d-a5a2-afcb3c29b4f4/publish?workspaceId=92191070-9e7c-4b5b-9889-0b09631b458c&authFlowId=e8496a65-4a0a-47c8-95a0-9a7bcad00d23&_pmt=pmMTc5MTg1MDI0Njg4MQ%253D%253D%257CPM.MjAyNi0wOS0xMVQwOTo1OTo1Ni4yOTRa',
     },
     {
