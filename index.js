@@ -77,6 +77,98 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   ];
 
+  // ==========================================
+  // 2. TECH STACK DATA & GENERATION
+  // ==========================================
+  const tech_stack = [
+    {
+      category: 'Frontend',
+      title: 'Frontend',
+      subtitle: 'UI, Styling & Web Engines',
+      items: [
+        { name: 'HTML5', subtitle: 'Markup', image: './images/html5.svg', title: 'HTML5' },
+        { name: 'CSS3', subtitle: 'Styling', image: './images/css3.svg', title: 'Cascading Style Sheets (CSS)' },
+        { name: 'JavaScript', subtitle: 'Language', image: './images/javascript.svg', title: 'JavaScript' },
+        { name: 'React.js', subtitle: 'Library', image: './images/react.svg', title: 'React.js' },
+        { name: 'Next.js', subtitle: 'Framework', image: './images/nextjs.svg', title: 'Next.js' },
+        { name: 'Vue.js', subtitle: 'Framework', image: './images/vue.svg', title: 'Vue.js' },
+        { name: 'Bootstrap', subtitle: 'UI Framework', image: './images/bootstrap.svg', title: 'Bootstrap (Framework)' },
+        { name: 'Tailwind CSS', subtitle: 'UI Framework', image: './images/tailwindcss.svg', title: 'Tailwind CSS' },
+      ],
+    },
+    {
+      category: 'Backend',
+      title: 'Backend',
+      subtitle: 'Services, Database & Cloud',
+      items: [
+        { name: 'Python', subtitle: 'Backend Engine', image: './images/python.svg', title: 'Python' },
+        { name: 'MongoDB', subtitle: 'NoSQL Database', image: './images/mongodb.svg', title: 'MongoDB' },
+        { name: 'Express.js', subtitle: 'Node.js Framework', image: './images/express.svg', title: 'Express.js' },
+        { name: 'Node.js', subtitle: 'Runtime', image: './images/nodejs.svg', title: 'Node.js' },
+        { name: 'Supabase', subtitle: 'PostgreSQL BaaS', image: './images/supabase.svg', title: 'Supabase' },
+        { name: 'Java', subtitle: 'Backend Engine', image: './images/java.svg', title: 'Java' },
+        { name: 'Render', subtitle: 'Cloud Hosting', image: './images/render.svg', title: 'Render' },
+      ],
+    },
+    {
+      category: 'Tools & Others',
+      title: 'Tools & Others',
+      subtitle: 'VCS, Workflow & Game Engines',
+      items: [
+        { name: 'Git', subtitle: 'Version Control', image: './images/git.svg', title: 'Git' },
+        { name: 'GitHub', subtitle: 'Cloud VCS', image: './images/github.svg', title: 'GitHub' },
+        { name: 'Gitea', subtitle: 'Self-Hosted Git', image: './images/gitea.svg', title: 'Gitea' },
+        { name: 'VSCode', subtitle: 'IDE Editor', image: './images/vscode.svg', title: 'VSCode' },
+        { name: 'Trello', subtitle: 'Project Board', image: './images/trello.svg', title: 'Trello' },
+        { name: 'Sublime Text', subtitle: 'Code Editor', image: './images/sublimetext.svg', title: 'Sublime Text' },
+        { name: 'Unity', subtitle: 'Game & 3D', image: './images/unity.svg', title: 'Unity' },
+      ],
+    },
+  ];
+
+  // Aliases for object-style access
+  tech_stack.frontend = tech_stack[0];
+  tech_stack.backend = tech_stack[1];
+  tech_stack.tools = tech_stack[2];
+  tech_stack.others = tech_stack[2];
+
+  function createToolItemHtml(tool) {
+    return `
+      <div class="col-6 tool-item">
+        <div class="p-3 rounded-3 bg-light border border d-flex flex-column align-items-center justify-content-center text-center tool-icon-tile h-100" title="${tool.title || tool.name}">
+          <img src="${tool.image}" alt="${tool.name}" class="mb-2 tool-image" />
+          <span class="text-xs fw-bold text-dark font-display">${tool.name}</span>
+          <span class="font-mono-code tool-img-text">${tool.subtitle}</span>
+        </div>
+      </div>
+    `;
+  }
+
+  function createCategoryCardHtml(group) {
+    const itemsHtml = group.items.map(createToolItemHtml).join('');
+    return `
+      <div class="col-lg-4 col-md-6">
+        <div class="standard-card p-4 h-100 d-flex flex-column">
+          <div class="pb-3 mb-3 border-bottom border-light text-center">
+            <h3 class="fs-5 fw-bold text-dark mb-0">${group.title || group.category}</h3>
+            <span class="text-xs font-mono-code">${group.subtitle}</span>
+          </div>
+
+          <!-- Tool Images -->
+          <div class="row g-3">
+            ${itemsHtml}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderTechStack() {
+    const container = document.getElementById('techStackContainer');
+    if (!container) return;
+    container.innerHTML = tech_stack.map(createCategoryCardHtml).join('');
+  }
+
   let currentIndex = 0;
   const total = projects.length;
 
@@ -88,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const actionNoticeText = document.getElementById('actionNoticeText');
 
   // ==========================================
-  // 2. 3-SLIDE PREVIEW CAROUSEL
+  // 3. 3-SLIDE PREVIEW CAROUSEL
   // ==========================================
   function showActionNotice(text) {
     if (!actionNotice || !actionNoticeText) return;
@@ -305,10 +397,11 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCarousel();
   });
 
+  renderTechStack();
   initCarousel();
 
   // ==========================================
-  // 3. ACTIVE NAV STATE SYNC ACROSS DESKTOP + MOBILE MENUS
+  // 4. ACTIVE NAV STATE SYNC ACROSS DESKTOP + MOBILE MENUS
   // ==========================================
   const navLinks = document.querySelectorAll('.nav-pill-btn');
 
@@ -398,7 +491,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ==========================================
-// 5. TYPED TEXT ANIMATION
+// 6. TYPED TEXT ANIMATION
 // ==========================================
 const text = ["Precision", "Purpose", "Performance"];
 const target = document.getElementById("typedText");
