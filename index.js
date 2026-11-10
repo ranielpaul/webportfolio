@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'E-commerce-API',
-      badge: 'Future Project',
+      badge: 'Live Project',
       title: 'E-Commerce API Documentation',
       description:
         'Dynamic E-Commerce Workflow Management. The system features dynamic routes for order processing, real-time inventory updates, and secure user authentication. It also supports seamless automated order reporting and comprehensive product management. Documented Backend API published publicly using Postman',
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'E-Commerce-App',
-      badge: 'Future Project',
+      badge: 'Live Project',
       title: 'E-Commerce App',
       description:
         'MERN E-Commerce Platform. The platform features dynamic product catalog with filtering and sorting. real-time search, seamless cart updates, secure checkout, and a comprehensive admin dashboard with real-time analytics and user management capabilities.',
