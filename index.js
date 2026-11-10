@@ -55,7 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
       description:
         'MERN E-Commerce Platform. The platform features dynamic product catalog with filtering and sorting. real-time search, seamless cart updates, secure checkout, and a comprehensive admin dashboard with real-time analytics and user management capabilities.',
       tags: ['Python', 'HTML', 'Bootstrap', 'Postman'],
-      imageBg: DEFAULT_PROJECT_IMAGE,
+      imageBg: "./images/projects/E-Commerce-App.png",
+      url: 'http://zuitt-bootcamp-prod-645-10068-limotan.s3-website.us-east-1.amazonaws.com'
     },
     {
       id: 'Airline-Mockup',
@@ -290,11 +291,14 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
 
           <div class="project-card-action-wrap">
-            <a href="${proj.url || '#projects'}" class="project-card-action" aria-label="View project ${proj.title}">
-              <span>View Projects</span>
-              <svg class="project-card-action-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-              </svg>
+            <a 
+            href="${proj.url || '#projects'}" 
+            class="project-card-action" 
+            aria-label="View project ${proj.title}"
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+              <span>View Project</span>
             </a>
           </div>
         </div>
