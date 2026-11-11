@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
       description:
         'A MERN-stack course enrollment sytstem featuring user registration, authentication, and profile management. Authenticated users can create, update, archive, and activate courses The platform also allows users to browse available courses and enroll seamlessly.',
       tags: ['HTML', 'Bootstrap', 'Postman', 'Node.js', 'Axios', 'MongoDB'],
-      imageBg: DEFAULT_PROJECT_IMAGE,
+      imageBg: './images/projects/Course-Booking-App.png',
     },
     {
       id: 'E-Commerce-App',
